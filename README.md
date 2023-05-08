@@ -26,5 +26,14 @@ git submodule update
 }
 ```
 
+## Commands
+
+### /ping
+
+get pong
+
+### /ask [goal]
+
+perform a goal
 
 
