@@ -6,7 +6,13 @@ A Discord bot that can be used to test semantic kernel https://github.com/micros
 
 1. Create a Discord bot and get the token
 
-2. Add secrets to DiscordBot 
+2. Go to in solution folder and run
+``` 
+git submodule init
+git submodule update
+```
+
+3. Add secrets to DiscordBot 
 
 ```
 {
@@ -20,8 +26,5 @@ A Discord bot that can be used to test semantic kernel https://github.com/micros
 }
 ```
 
-3. Go to in solution folder and run
-``` 
-git submodule add https://github.com/microsoft/semantic-kernel
-```
+
 
