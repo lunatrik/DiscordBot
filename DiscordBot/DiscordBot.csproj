@@ -29,7 +29,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\semantic-kernel\dotnet\src\Connectors\Connectors.AI.OpenAI\Connectors.AI.OpenAI.csproj" />
-    <ProjectReference Include="..\semantic-kernel\dotnet\src\Connectors\Connectors.Memory.Qdrant\Connectors.Memory.Qdrant.csproj" />
     <ProjectReference Include="..\semantic-kernel\dotnet\src\Extensions\Planning.ActionPlanner\Planning.ActionPlanner.csproj" />
     <ProjectReference Include="..\semantic-kernel\dotnet\src\Extensions\Planning.SequentialPlanner\Planning.SequentialPlanner.csproj" />
     <ProjectReference Include="..\semantic-kernel\dotnet\src\SemanticKernel\SemanticKernel.csproj" />

@@ -37,4 +37,32 @@ internal static class RepoFiles
 
         return path;
     }
+
+    internal static string CustomSkillsPath()
+    {
+        const string Parent = "CustomSkills";
+        string Folder = "skills";
+
+        bool SearchPath(string pathToFind, out string result, int maxAttempts = 10)
+        {
+            var currDir = Path.GetFullPath(Assembly.GetExecutingAssembly().Location);
+            bool found;
+            do
+            {
+                result = Path.Join(currDir, pathToFind);
+                found = Directory.Exists(result);
+                currDir = Path.GetFullPath(Path.Combine(currDir, ".."));
+            } while (maxAttempts-- > 0 && !found);
+
+            return found;
+        }
+
+        if (!SearchPath(Parent + Path.DirectorySeparatorChar + Folder, out string path)
+            && !SearchPath(Folder, out path))
+        {
+            throw new Exception("Skills directory not found. The app needs the skills from the repo to work.");
+        }
+
+        return path;
+    }
 }

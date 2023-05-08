@@ -29,10 +29,14 @@ namespace DiscordBot.Modules
             var key = _configuration["OPENAI_API_KEY"];
             kernel.Config.AddOpenAITextCompletionService("text-davinci-002", key);
 
-
             string folder = RepoFiles.SampleSkillsPath();
+
             kernel.ImportSemanticSkillFromDirectory(folder, "SummarizeSkill");
             kernel.ImportSemanticSkillFromDirectory(folder, "WriterSkill");
+
+            string customFolder = RepoFiles.CustomSkillsPath();
+
+            kernel.ImportSemanticSkillFromDirectory(customFolder, "TwitterSkill");
 
             var bingKey = _configuration["BING_API_KEY"];
 
