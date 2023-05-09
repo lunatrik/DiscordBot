@@ -22,7 +22,6 @@ git submodule update
   "TextCompletion:Key": "OPENAI_API_KEY",
   "Embedding:Key": "OPENAI_API_KEY",
   "BING_API_KEY": "BING_API_KEY",
-  
 }
 ```
 

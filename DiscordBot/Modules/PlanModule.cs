@@ -27,8 +27,8 @@ namespace DiscordBot.Modules
             await DeferAsync();
             var kernel = new KernelBuilder().WithLogger(_logger).Build();
             var key = _configuration["OPENAI_API_KEY"];
-            kernel.Config.AddOpenAITextCompletionService("text-davinci-003", key);
             //kernel.Config.AddOpenAITextCompletionService("text-davinci-003", key);
+            kernel.Config.AddOpenAIChatCompletionService("gpt-3.5-turbo", key);
 
             string folder = RepoFiles.SampleSkillsPath();
 
