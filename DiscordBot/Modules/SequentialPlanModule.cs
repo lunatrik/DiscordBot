@@ -58,9 +58,6 @@ namespace DiscordBot.Modules
 
             await FollowupAsync(result.ToString());
 
-
-
-
         }
 
 

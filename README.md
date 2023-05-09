@@ -33,6 +33,9 @@ get pong
 
 ### /ask [goal]
 
-perform a goal
+perform a goal with ActionPlanner
 
+### /plan [goal]
+
+perform a goal with SequentialPlanner
 
