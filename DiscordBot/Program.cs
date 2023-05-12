@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Skills.Twitter.Config;
 
 using IHost host = Host.CreateDefaultBuilder(args)
 
@@ -21,6 +22,7 @@ using IHost host = Host.CreateDefaultBuilder(args)
     {
 
         services.AddOptions(hostContext.Configuration);
+        services.Configure<TwitterConfig>(hostContext.Configuration.GetSection("Twitter"));
         services.AddSingleton<Microsoft.Extensions.Logging.ILogger>(sp => sp.GetRequiredService<ILogger<Program>>());
 
 

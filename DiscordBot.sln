@@ -21,6 +21,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skills.OpenAPI", "semantic-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skills.Web", "semantic-kernel\dotnet\src\Skills\Skills.Web\Skills.Web.csproj", "{F75FA462-DA4F-4575-9C25-A46E6E3454B9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomSkills", "CustomSkills", "{BF42F278-C8EB-425A-8B13-1F562D90DF2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TwitterSkills", "TwitterSkills", "{2395E57B-C421-4E56-927A-3CBF9D214544}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skills.Twitter", "CustomSkills\skills\TwitterSkill\Skills.Twitter\Skills.Twitter.csproj", "{427A2397-1F89-438A-BFA7-DCE098F741C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +65,10 @@ Global
 		{F75FA462-DA4F-4575-9C25-A46E6E3454B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F75FA462-DA4F-4575-9C25-A46E6E3454B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F75FA462-DA4F-4575-9C25-A46E6E3454B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{427A2397-1F89-438A-BFA7-DCE098F741C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{427A2397-1F89-438A-BFA7-DCE098F741C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{427A2397-1F89-438A-BFA7-DCE098F741C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{427A2397-1F89-438A-BFA7-DCE098F741C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +81,8 @@ Global
 		{836E7EA6-5416-4168-8719-631CC1F42059} = {EAD453C6-99DE-453B-A472-2843580FE60E}
 		{675ADEE8-C6B8-4FA4-958D-27D1E260946A} = {EAD453C6-99DE-453B-A472-2843580FE60E}
 		{F75FA462-DA4F-4575-9C25-A46E6E3454B9} = {EAD453C6-99DE-453B-A472-2843580FE60E}
+		{2395E57B-C421-4E56-927A-3CBF9D214544} = {BF42F278-C8EB-425A-8B13-1F562D90DF2E}
+		{427A2397-1F89-438A-BFA7-DCE098F741C2} = {2395E57B-C421-4E56-927A-3CBF9D214544}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1652A823-3F76-4603-94B7-94239207BDE5}

@@ -1,11 +1,14 @@
 ﻿using Discord.Interactions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Orchestration;
 using Microsoft.SemanticKernel.Planning;
 using Microsoft.SemanticKernel.Skills.Web;
 using Microsoft.SemanticKernel.Skills.Web.Bing;
+using Skills.Twitter;
+using Skills.Twitter.Config;
 
 namespace DiscordBot.Modules
 {
@@ -13,11 +16,12 @@ namespace DiscordBot.Modules
     {
         private static ILogger _logger;
         private static IConfiguration _configuration;
-
-        public SequentialPlanModule(ILogger<PlanModule> logger, IConfiguration configuration)
+        private static TwitterConfig _twitterConfig;
+        public SequentialPlanModule(ILogger<PlanModule> logger, IConfiguration configuration, IOptions<TwitterConfig> twitterConfig)
         {
             _logger = logger;
             _configuration = configuration;
+            _twitterConfig = twitterConfig.Value;
         }
 
         [SlashCommand("plan", "plan a goal")]
@@ -38,6 +42,8 @@ namespace DiscordBot.Modules
             string customFolder = RepoFiles.CustomSkillsPath();
 
             kernel.ImportSemanticSkillFromDirectory(customFolder, "TwitterSkill");
+
+            kernel.ImportSkill(new TwitterEngineSkill(_twitterConfig), "twitter");
 
             var bingKey = _configuration["BING_API_KEY"];
 
