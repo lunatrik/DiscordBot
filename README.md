@@ -22,6 +22,11 @@ git submodule update
   "TextCompletion:Key": "OPENAI_API_KEY",
   "Embedding:Key": "OPENAI_API_KEY",
   "BING_API_KEY": "BING_API_KEY",
+  "Twitter:ConsumerKey": "CONSUMER_KEY",
+  "Twitter:ConsumerSecret ": "CONSUMER_SECRETS",
+  "Twitter:AccessKey ": "API_TWITTER",
+  "Twitter:AccessSecret ": "API_TWITTER"
+  }
 }
 ```
 
@@ -39,3 +44,10 @@ perform a goal with ActionPlanner
 
 perform a goal with SequentialPlanner
 
+### /twitter-auth
+
+open a new web page to authenticate with Twitter and get pin to use in /twitter-pin
+
+### /twitter-pin [pin]
+
+authenticate with Twitter using pin from /twitter-auth
